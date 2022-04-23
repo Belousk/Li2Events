@@ -1,0 +1,62 @@
+body.body{
+    background-color: #1e1d1d;
+    color: sandybrown;
+}
+
+h1.page-title{
+    text-align: center;
+}
+.logo{
+    margin-left: 10px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+p.auth {
+    margin: 0;
+}
+.quit-button{
+    color: sandybrown;
+}
+.quit-button:hover{
+    color: sandybrown;
+    opacity: 0.9;
+}
+
+.content {
+    margin: 10px auto;
+    width: 900px;
+    padding: 10px;
+}
+
+input.form-control {
+    width: auto;
+}
+
+.event {
+    background-position: 50% 50%;
+    /*background-attachment: fixed;*/
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+
+.event h3{
+    color: darkkhaki;
+    text-shadow: 0 0 10px black;
+}
+
+.event:hover{
+    transform: scale(1.02);
+    transition-duration: 500ms;
+    opacity: 0.9;
+}
+

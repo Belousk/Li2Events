@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+
+
+    </style>
+    <h1 class="page-title"> Мероприятия </h1>
+        <div class="events">
+        {% for event in events %}
+            <div class="event" style='background-image: url({{url_for('static', filename=event.img)}})'>
+            <h3>{{ event.title }}</h3>
+            {% if current_user.is_authenticated %}
+                {% if current_user in event.users %}
+                    <a class="btn btn-danger" href="/event/{{ event.id }}/quit">Выйти из события</a>
+                {% else %}
+                    <a class="btn btn-success" href="/event/{{ event.id }}/join">Вступить в событие</a>
+                {% endif %}
+            {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}
