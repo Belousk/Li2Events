@@ -30,6 +30,10 @@
             </p>
         {% endfor %}
     </p>
+    <p>Пароль должен:</p>
+    <p>1) не менее 7 символов</p>
+    <p>2) Содержать буквы и символы</p>
+    <p>3) Иметь строчные и прописные символы</p>
     <p>
         {{ form.password_again.label }}<br>
         {{ form.password_again(class="form-control", type="password") }}<br>

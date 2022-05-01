@@ -4,135 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b336033-389f-49cd-963c-a5aa556f9c71" name="Changes" comment="profile page, user and event api">
-      <change afterPath="$PROJECT_DIR$/api/events_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/users_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/normalizer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/form/profile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi-2021.10.8.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi/cacert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/certifi/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer-2.0.12.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/assets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/cd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/cli/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/cli/normalizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/constant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/legacy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/md.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/py.typed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/charset_normalizer/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna-3.3.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/codec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/idnadata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/intranges.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/package_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/py.typed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/idna/uts46data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/REQUESTED" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests-2.27.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/__version__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/_internal_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/adapters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/certs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/cookies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/hooks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/packages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/sessions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/status_codes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/requests/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3-1.26.9.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/_collections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/connectionpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/_appengine_environ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/_securetransport/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/contrib/socks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/filepost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/packages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/packages/backports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/packages/six.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/poolmanager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/proxy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/retry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/ssl_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/ssl_match_hostname.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/ssltransport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/timeout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/urllib3/util/wait.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/wot_blitz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_profile.html" afterDir="false" />
+    <list default="true" id="1b336033-389f-49cd-963c-a5aa556f9c71" name="Changes" comment="improve password hardness checking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/data.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/form/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +57,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/kbelous/PycharmProjects/YalLessonOrm",
     "node.js.detected.package.eslint": "true",
@@ -263,7 +140,8 @@
       <workItem from="1650522095540" duration="11052000" />
       <workItem from="1650715920378" duration="7628000" />
       <workItem from="1650879308924" duration="3096000" />
-      <workItem from="1651234471695" duration="24704000" />
+      <workItem from="1651234471695" duration="28684000" />
+      <workItem from="1651428387681" duration="1376000" />
     </task>
     <task id="LOCAL-00001" summary="first blood">
       <created>1650719093698</created>
@@ -279,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651404975091</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create requirements.txt with needed files">
+      <created>1651405521708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651405521708</updated>
+    </task>
+    <task id="LOCAL-00004" summary="improve password hardness checking">
+      <created>1651408693944</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651408693944</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,18 +191,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first blood" />
     <MESSAGE value="profile page, user and event api" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile page, user and event api" />
+    <MESSAGE value="create requirements.txt with needed files" />
+    <MESSAGE value="improve password hardness checking" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve password hardness checking" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="list(filter(lambda item: item['email'] == user['email'], users))" language="Python" />
@@ -319,6 +204,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskProject$test.coverage" NAME="test Coverage Results" MODIFIED="1650882888974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlaskProject$main.coverage" NAME="main Coverage Results" MODIFIED="1651393314353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskProject$main.coverage" NAME="main Coverage Results" MODIFIED="1651431851944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

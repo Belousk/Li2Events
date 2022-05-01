@@ -82,9 +82,8 @@ def register():
                                    message="Извините, но эти мероприятия только для учеников ЛИ2")
 
         users = get(f'{ADDRESS}:{PORT}/api/users').json()['users']
-        user = get(f'{ADDRESS}:{PORT}/api/users/{current_user.id}').json()['user']
 
-        if list(filter(lambda item: item['email'] == user['email'], users))[0]:
+        if list(filter(lambda item: item['email'] == form.email.data, users)):
             return render_template('register.html', title='Регистрация',
                                    form=form,
                                    message="Почта занята. Может у вас уже есть аккаунт")
