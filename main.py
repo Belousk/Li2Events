@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect
 from requests import post, get, put
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 
-from api import users_api
+from api import users_api, events_api
 from data.__all_models import User, Event
 from data.db_session import create_session, global_init
 from form.login import LoginForm
@@ -10,6 +10,11 @@ from form.profile import ProfileForm
 from form.user import RegisterForm
 
 app = Flask(__name__)
+
+ADDRESS = 'http://localhost'
+PORT = '5000'
+BAD_KEYBOARD_COMBINATION = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm',
+                            'йцукенгшщзхъ', 'фывапролджэё', 'ячсмитьбю']
 
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 app.debug = True
@@ -29,29 +34,69 @@ def register():
     form = RegisterForm()
 
     if form.validate_on_submit():
-        if form.password.data != form.password_again.data:
+        password = str(form.password.data)
+        if len(password) < 7:
             return render_template('register.html', title='Регистрация',
                                    form=form,
-                                   message="Пароли не совпадают")
+                                   message="Слишком короткий пароль")
+
+        small_char = False
+        big_char = False
+        digit_char = False
+
+        for i in list(password):
+            if i.islower():
+                small_char = True
+            if i.isupper():
+                big_char = True
+            if i.isdigit():
+                digit_char = True
+
+            if big_char and small_char and digit_char:
+                break
+
+        if not small_char or not big_char:
+            return render_template('register.html', title='Регистрация',
+                                   form=form,
+                                   message="Пароль должен состоять из прописных и строчных букв")
+
+        if not digit_char:
+            return render_template('register.html', title='Регистрация',
+                                   form=form,
+                                   message="В пароле должна быть хотя бы одна цифра")
+
+        for i in range(len(list(password))):
+            if password[i].isalpha():
+                if i + 3 <= len(password):
+
+                    for j in BAD_KEYBOARD_COMBINATION:
+
+                        if password[i:i + 3:].lower() in j:
+                            return render_template('register.html', title='Регистрация',
+                                                   form=form,
+                                                   message="Пароли не совпадают")
 
         if not form.email.data.endswith('@litsey2.ru'):
             return render_template('register.html', title='Регистрация',
                                    form=form,
                                    message="Извините, но эти мероприятия только для учеников ЛИ2")
 
-        users = get(f'http://localhost:5000/api/users/{current_user.id}').json()['user']
+        users = get(f'{ADDRESS}:{PORT}/api/users').json()['users']
+        user = get(f'{ADDRESS}:{PORT}/api/users/{current_user.id}').json()['user']
+
         if list(filter(lambda item: item['email'] == user['email'], users))[0]:
             return render_template('register.html', title='Регистрация',
                                    form=form,
                                    message="Почта занята. Может у вас уже есть аккаунт")
 
-        post('http://localhost:5000/api/users', json={
+        post(f'{ADDRESS}:{PORT}/api/users', json={
             "name": form.name.data,
             "surname": form.surname.data,
             "email": form.email.data,
             "password": form.password.data
         })
         return redirect('/login')
+
     return render_template('register.html', title='Регистрация', form=form)
 
 
@@ -147,7 +192,8 @@ def profile():
 
 def main():
     global_init('db/data.sqlite')
-    app.register_blueprint(user_api.blueprint)
+    app.register_blueprint(users_api.blueprint)
+    app.register_blueprint(events_api.blueprint)
     app.run()
 
 

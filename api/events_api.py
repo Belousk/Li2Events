@@ -16,7 +16,7 @@ def get_events():
     event = db_sess.query(Event).all()
     return jsonify(
         {
-            'event':
+            'events':
                 [item.to_dict(only=('title', 'description', 'img'))
                  for item in event]
         }
