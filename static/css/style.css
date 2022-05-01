@@ -1,14 +1,20 @@
-body.body{
-    background-color: #1e1d1d;
+body.body {
+    background: linear-gradient(0deg, rgba(16, 16, 21, 1) 0%, rgba(48, 48, 69, 1) 100%);
     color: sandybrown;
 }
 
-h1.page-title{
+html {
+    height: 100%;
+}
+
+h1.page-title {
     text-align: center;
 }
-.logo{
+
+.logo {
     margin-left: 10px;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -19,12 +25,17 @@ h1.page-title{
 p.auth {
     margin: 0;
 }
-.quit-button{
+
+.quit-button, .profile-btn {
     color: sandybrown;
+    text-decoration: none;
 }
-.quit-button:hover{
+
+.quit-button:hover, .profile-btn:hover {
     color: sandybrown;
     opacity: 0.9;
+    transform: scale(1.2);
+    transition-duration: 200ms;
 }
 
 .content {
@@ -45,16 +56,17 @@ input.form-control {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-.event h3{
+.event h3 {
     color: darkkhaki;
     text-shadow: 0 0 10px black;
 }
 
-.event:hover{
+.event:hover {
     transform: scale(1.02);
     transition-duration: 500ms;
     opacity: 0.9;

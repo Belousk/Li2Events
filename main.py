@@ -1,9 +1,12 @@
 from flask import Flask, render_template, redirect
+from requests import post, get, put
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 
+from api import users_api
 from data.__all_models import User, Event
 from data.db_session import create_session, global_init
 from form.login import LoginForm
+from form.profile import ProfileForm
 from form.user import RegisterForm
 
 app = Flask(__name__)
@@ -30,18 +33,24 @@ def register():
             return render_template('register.html', title='Регистрация',
                                    form=form,
                                    message="Пароли не совпадают")
-        db_sess = create_session()
-        if db_sess.query(User).filter(User.email == form.email.data).first():
+
+        if not form.email.data.endswith('@litsey2.ru'):
             return render_template('register.html', title='Регистрация',
                                    form=form,
-                                   message="Такой пользователь уже есть")
-        user = User()
-        user.name = form.name.data
-        user.surname = form.surname.data
-        user.email = form.email.data
-        user.set_password(form.password.data)
-        db_sess.add(user)
-        db_sess.commit()
+                                   message="Извините, но эти мероприятия только для учеников ЛИ2")
+
+        users = get(f'http://localhost:5000/api/users/{current_user.id}').json()['user']
+        if list(filter(lambda item: item['email'] == user['email'], users))[0]:
+            return render_template('register.html', title='Регистрация',
+                                   form=form,
+                                   message="Почта занята. Может у вас уже есть аккаунт")
+
+        post('http://localhost:5000/api/users', json={
+            "name": form.name.data,
+            "surname": form.surname.data,
+            "email": form.email.data,
+            "password": form.password.data
+        })
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
 
@@ -61,11 +70,12 @@ def login():
         user = db_sess.query(User).filter(User.email == form.email.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember_me.data)
-
             return redirect("/")
+
         return render_template('login.html',
                                message="Неправильный логин или пароль",
                                form=form)
+
     return render_template('login.html', title='Авторизация', form=form)
 
 
@@ -74,8 +84,9 @@ def login():
 def quit_event(event_id):
     db_sess = create_session()
     event = db_sess.query(Event).get(event_id)
-    event.users.remove(current_user)
-    db_sess.merge(current_user)
+    user = db_sess.query(User).get(current_user.id)
+    event.users.remove(user)
+    db_sess.merge(user)
     db_sess.merge(event)
     db_sess.commit()
     return redirect('/')
@@ -86,9 +97,10 @@ def quit_event(event_id):
 def join_event(event_id):
     db_sess = create_session()
     event = db_sess.query(Event).get(event_id)
-    event.users.append(current_user)
+    user = db_sess.query(User).get(current_user.id)
+    event.users.append(user)
     db_sess.merge(event)
-    db_sess.merge(current_user)
+    db_sess.merge(user)
     db_sess.commit()
     return redirect('/')
 
@@ -100,8 +112,42 @@ def logout():
     return redirect('/')
 
 
+@app.route('/profile', methods=['POST', 'GET'])
+@login_required
+def profile():
+    form = ProfileForm()
+    user = get(f'http://localhost:5000/api/users/{current_user.id}').json()['user']
+
+    if form.validate_on_submit():
+        users = get('http://localhost:5000/api/users').json()['users']
+
+        if list(filter(lambda item: item['email'] == form.email.data, users)) and user['email'] != form.email.data:
+            return render_template('edit_profile.html', title='Профиль',
+                                   form=form,
+                                   message="Такой email уже используется другим пользователем")
+
+        if not form.email.data.endswith('@litsey2.ru'):
+            return render_template('edit_profile.html', title='Профиль',
+                                   form=form,
+                                   message="Извините, но эти мероприятия только для учеников ЛИ2")
+
+        put(f'http://localhost:5000/api/users/{current_user.id}', json={
+            "name": form.name.data,
+            "surname": form.surname.data,
+            "email": form.email.data,
+        })
+
+        return redirect('/')
+    form.name.data = user['name']
+    form.surname.data = user['surname']
+    form.email.data = user['email']
+
+    return render_template('edit_profile.html', title='Профиль', form=form)
+
+
 def main():
     global_init('db/data.sqlite')
+    app.register_blueprint(user_api.blueprint)
     app.run()
 
 
