@@ -18,7 +18,6 @@ association_table = sqlalchemy.Table(
 
 class User(SqlAlchemyBase, UserMixin, SerializerMixin):
     __tablename__ = 'users'
-
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
     name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
@@ -40,7 +39,6 @@ class User(SqlAlchemyBase, UserMixin, SerializerMixin):
 
 class Event(SqlAlchemyBase, SerializerMixin, UserMixin):
     __tablename__ = 'events'
-
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
     title = sqlalchemy.Column(sqlalchemy.String, nullable=True)

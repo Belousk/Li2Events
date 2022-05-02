@@ -11,8 +11,8 @@ from form.user import RegisterForm
 
 app = Flask(__name__)
 
-ADDRESS = 'http://localhost'
-PORT = '5000'
+ADDRESS = '127.0.0.1'
+PORT = 5000
 BAD_KEYBOARD_COMBINATION = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm',
                             'йцукенгшщзхъ', 'фывапролджэё', 'ячсмитьбю']
 
@@ -81,14 +81,14 @@ def register():
                                    form=form,
                                    message="Извините, но эти мероприятия только для учеников ЛИ2")
 
-        users = get(f'{ADDRESS}:{PORT}/api/users').json()['users']
+        users = get(f'http://{ADDRESS}:{PORT}/api/users').json()['users']
 
         if list(filter(lambda item: item['email'] == form.email.data, users)):
             return render_template('register.html', title='Регистрация',
                                    form=form,
                                    message="Почта занята. Может у вас уже есть аккаунт")
 
-        post(f'{ADDRESS}:{PORT}/api/users', json={
+        post(f'http://{ADDRESS}:{PORT}/api/users', json={
             "name": form.name.data,
             "surname": form.surname.data,
             "email": form.email.data,
@@ -160,10 +160,10 @@ def logout():
 @login_required
 def profile():
     form = ProfileForm()
-    user = get(f'http://localhost:5000/api/users/{current_user.id}').json()['user']
+    user = get(f'http://{ADDRESS}:{PORT}/api/users/{current_user.id}').json()['user']
 
     if form.validate_on_submit():
-        users = get('http://localhost:5000/api/users').json()['users']
+        users = get(f'http://{ADDRESS}:{PORT}/api/users').json()['users']
 
         if list(filter(lambda item: item['email'] == form.email.data, users)) and user['email'] != form.email.data:
             return render_template('edit_profile.html', title='Профиль',
@@ -175,7 +175,7 @@ def profile():
                                    form=form,
                                    message="Извините, но эти мероприятия только для учеников ЛИ2")
 
-        put(f'http://localhost:5000/api/users/{current_user.id}', json={
+        put(f'http://{ADDRESS}:{PORT}/api/users/{current_user.id}', json={
             "name": form.name.data,
             "surname": form.surname.data,
             "email": form.email.data,
@@ -193,7 +193,7 @@ def main():
     global_init('db/data.sqlite')
     app.register_blueprint(users_api.blueprint)
     app.register_blueprint(events_api.blueprint)
-    app.run()
+    app.run(host=ADDRESS, port=PORT)
 
 
 if __name__ == '__main__':

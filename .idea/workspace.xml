@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b336033-389f-49cd-963c-a5aa556f9c71" name="Changes" comment="improve password hardness checking">
+    <list default="true" id="1b336033-389f-49cd-963c-a5aa556f9c71" name="Changes" comment="adding link by clicking on logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__all_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__all_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +141,7 @@
       <workItem from="1650715920378" duration="7628000" />
       <workItem from="1650879308924" duration="3096000" />
       <workItem from="1651234471695" duration="28684000" />
-      <workItem from="1651428387681" duration="1376000" />
+      <workItem from="1651428387681" duration="4175000" />
     </task>
     <task id="LOCAL-00001" summary="first blood">
       <created>1650719093698</created>
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651408693944</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding link by clicking on logo">
+      <created>1651432197245</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651432197245</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +200,8 @@
     <MESSAGE value="profile page, user and event api" />
     <MESSAGE value="create requirements.txt with needed files" />
     <MESSAGE value="improve password hardness checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve password hardness checking" />
+    <MESSAGE value="adding link by clicking on logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding link by clicking on logo" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -204,6 +212,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskProject$test.coverage" NAME="test Coverage Results" MODIFIED="1650882888974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlaskProject$main.coverage" NAME="main Coverage Results" MODIFIED="1651431851944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskProject$main.coverage" NAME="main Coverage Results" MODIFIED="1651434563596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
