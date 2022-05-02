@@ -4,10 +4,13 @@ from flask_login import LoginManager, current_user, login_required, login_user, 
 
 from api import users_api, events_api
 from data.__all_models import User, Event
-from data.db_session import create_session, global_init
+from data.db_session import global_init
 from form.login import LoginForm
 from form.profile import ProfileForm
 from form.user import RegisterForm
+
+global_init('db/data.sqlite')
+from data.db_session import create_session
 
 app = Flask(__name__)
 
@@ -190,7 +193,6 @@ def profile():
 
 
 def main():
-    global_init('db/data.sqlite')
     app.register_blueprint(users_api.blueprint)
     app.register_blueprint(events_api.blueprint)
     app.run(host=ADDRESS, port=PORT)
